@@ -8,6 +8,8 @@ var signUpArray = JSON.parse(localStorage.getItem("user"));
 
 function isLoginEmpty() {
   if (signinEmail.value == "" || signinPassword.value == "") {
+    wrongData.innerHTML =
+    '<span class="text-danger m-3">All inputs is required</span>';
     return false;
   } else {
     return true;
@@ -15,17 +17,12 @@ function isLoginEmpty() {
 }
 
 sumBtn.addEventListener("click", function () {
+  isLoginEmpty();
   login();
   // console.log("mohamed");
 });
 
 function login() {
-  if (isLoginEmpty == false) {
-    wrongData.innerHTML =
-      '<span class="text-danger m-3">All inputs is required</span>';
-    return false;
-  }
-
   var password = signinPassword.value;
   var email = signinEmail.value;
 
