@@ -7,7 +7,7 @@ var signUpArray = JSON.parse(localStorage.getItem("user"));
 
 
 function isLoginEmpty() {
-  if (signinPassword.value == "" || signinEmail.value == "") {
+  if (signinEmail.value == "" || signinPassword.value == "") {
     return false;
   } else {
     return true;
